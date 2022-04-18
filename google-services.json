@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "803836226051",
+    "project_id": "shopp-8fc11",
+    "storage_bucket": "shopp-8fc11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803836226051:android:12b956f8741d0c21ef7c36",
+        "android_client_info": {
+          "package_name": "com.example.shopp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803836226051-bvkdf6uim2egqlsqqc0dcuo00cn0uofa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAQHzzi5sTJ9rGfmDGU7PtQi0tgobZMcw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803836226051-bvkdf6uim2egqlsqqc0dcuo00cn0uofa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
