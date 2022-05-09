@@ -1,0 +1,19 @@
+{
+  "offers": [
+    {
+      "id": "offer_001",
+      "title": "Bananas",
+      "price": "1.99"
+    },
+    {
+      "id": "offer_002",
+      "title": "Frozen pizza",
+      "price": "3.99"
+    },
+    {
+      "id": "offer_003",
+      "title": "Chocolate",
+      "price": "2.49"
+    }
+  ]
+}
