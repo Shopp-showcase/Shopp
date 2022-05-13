@@ -30,6 +30,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -44,4 +48,7 @@ dependencies {
     implementation "androidx.fragment:fragment-ktx:1.4.1"
 
     implementation platform('com.google.firebase:firebase-bom:29.3.1')
+
+    implementation("androidx.navigation:navigation-fragment-ktx:2.5.0-beta01")
+    implementation("androidx.navigation:navigation-ui-ktx:2.5.0-beta01")
 }
