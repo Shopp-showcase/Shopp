@@ -6,14 +6,34 @@
       "price": "1.99"
     },
     {
+      "id": "offer_003",
+      "title": "Strawberries",
+      "price": "3.49"
+    },
+    {
+      "id": "offer_003",
+      "title": "Tomatoes",
+      "price": "1.55"
+    },
+    {
       "id": "offer_002",
       "title": "Frozen pizza",
       "price": "3.99"
     },
     {
       "id": "offer_003",
+      "title": "Ice cream",
+      "price": "4.20"
+    },
+    {
+      "id": "offer_003",
       "title": "Chocolate",
       "price": "2.49"
+    },
+    {
+      "id": "offer_003",
+      "title": "Wine",
+      "price": "10.80"
     }
   ]
 }
