@@ -26,15 +26,15 @@
     },
     {
       "id": "offer_005",
-      "title": "Chocolates",
-      "detail": "250g",
-      "price": "3.49"
-    },
-    {
-      "id": "offer_006",
       "title": "Macaroons",
       "detail": "300g",
       "price": "7.60"
+    },
+    {
+      "id": "offer_006",
+      "title": "Chocolates",
+      "detail": "250g",
+      "price": "3.49"
     },
     {
       "id": "offer_007",
