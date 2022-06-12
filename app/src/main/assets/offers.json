@@ -3,37 +3,44 @@
     {
       "id": "offer_001",
       "title": "Bananas",
+      "detail": "price per kg",
       "price": "1.99"
     },
     {
-      "id": "offer_003",
+      "id": "offer_002",
       "title": "Strawberries",
+      "detail": "300g",
       "price": "3.49"
     },
     {
       "id": "offer_003",
-      "title": "Tomatoes",
-      "price": "1.55"
+      "title": "Blueberries",
+      "detail": "400g",
+      "price": "4.55"
     },
     {
-      "id": "offer_002",
-      "title": "Frozen pizza",
-      "price": "3.99"
+      "id": "offer_004",
+      "title": "Apples",
+      "detail": "price per kg",
+      "price": "0.99"
     },
     {
-      "id": "offer_003",
-      "title": "Ice cream",
-      "price": "4.20"
+      "id": "offer_005",
+      "title": "Chocolates",
+      "detail": "250g",
+      "price": "3.49"
     },
     {
-      "id": "offer_003",
-      "title": "Chocolate",
-      "price": "2.49"
+      "id": "offer_006",
+      "title": "Macaroons",
+      "detail": "300g",
+      "price": "7.60"
     },
     {
-      "id": "offer_003",
-      "title": "Wine",
-      "price": "10.80"
+      "id": "offer_007",
+      "title": "Tonic water",
+      "detail": "200ml",
+      "price": "1.89"
     }
   ]
 }

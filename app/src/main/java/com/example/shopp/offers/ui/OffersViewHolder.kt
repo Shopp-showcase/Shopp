@@ -8,6 +8,8 @@ class OffersViewHolder(private val binding: ItemOffersBinding) : RecyclerView.Vi
 
     fun bind(item: Offer) {
         binding.productName.text = item.title
+        binding.productDetails.text = item.detail
         binding.productPrice.text = item.price
+        binding.productImage.setImageResource(item.imageId)
     }
 }

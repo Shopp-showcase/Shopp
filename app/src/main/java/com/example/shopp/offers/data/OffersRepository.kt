@@ -14,7 +14,9 @@ object OffersRepository {
 
     fun initOffers(context: Context) {
         CoroutineScope(Dispatchers.Default).launch {
-           _offerItemsFlow.emit(OffersDataParser.parseOffersData(context))
+            val parsedOffers = OffersDataParser.parseOffersData(context)
+            parsedOffers?.offers?.forEach { it.imageId = OffersImageProvider.getImageId(it.id) }
+            _offerItemsFlow.emit(parsedOffers)
         }
     }
 }
