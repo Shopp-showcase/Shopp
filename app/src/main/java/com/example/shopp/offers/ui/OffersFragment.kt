@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.shopp.R
+import com.example.shopp.config.FeaturesManager
 import com.example.shopp.databinding.FragmentOffersBinding
 import kotlinx.coroutines.launch
 
@@ -52,6 +53,10 @@ class OffersFragment : Fragment() {
         menuHost.addMenuProvider(object : MenuProvider {
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
                 menuInflater.inflate(R.menu.offers_menu, menu)
+            }
+
+            override fun onPrepareMenu(menu: Menu) {
+                menu.findItem(R.id.menu_item_sl).isVisible = FeaturesManager.isShoppingListActive
             }
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
