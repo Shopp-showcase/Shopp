@@ -19,13 +19,18 @@ object ShoppingListRepository {
         postItemsUpdate()
     }
 
+    fun removeShoppingListItem(shoppingListItem: ShoppingListItem) {
+        shoppingListItems.removeIf { it.id == shoppingListItem.id }
+        postItemsUpdate()
+    }
+
     fun checkShoppingListItem(shoppingListItem: ShoppingListItem) {
-        shoppingListItems.find { it.productName == shoppingListItem.productName }?.checked = true
+        shoppingListItems.find { it.id == shoppingListItem.id }?.checked = true
         postItemsUpdate()
     }
 
     fun unCheckShoppingListItem(shoppingListItem: ShoppingListItem) {
-        shoppingListItems.find { it.productName == shoppingListItem.productName }?.checked = false
+        shoppingListItems.find { it.id == shoppingListItem.id }?.checked = false
         postItemsUpdate()
     }
 

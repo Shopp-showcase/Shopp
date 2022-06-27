@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.shopp.databinding.ItemShoppingListBinding
 import com.example.shopp.shoppinglist.data.ShoppingListItem
 
-class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListViewHolder>() {
+class ShoppingListAdapter(private val checkSLItemListener: (item: ShoppingListItem, isChecked: Boolean) -> Unit) : RecyclerView.Adapter<ShoppingListViewHolder>() {
 
     private val adapterItems = ArrayList<ShoppingListItem>()
 
@@ -20,7 +20,7 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShoppingListViewHolder {
         val binding = ItemShoppingListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ShoppingListViewHolder(binding)
+        return ShoppingListViewHolder(binding, checkSLItemListener)
     }
 
     override fun onBindViewHolder(holder: ShoppingListViewHolder, position: Int) {

@@ -5,6 +5,7 @@ import android.view.*
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
@@ -13,13 +14,19 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.shopp.R
 import com.example.shopp.config.FeaturesManager
 import com.example.shopp.databinding.FragmentOffersBinding
+import com.example.shopp.offers.data.Offer
+import com.example.shopp.shoppinglist.ui.ShoppingListViewModel
 import kotlinx.coroutines.launch
 
 class OffersFragment : Fragment() {
 
     private val viewModel: OffersViewModel = OffersViewModel()
+    private val slViewModel: ShoppingListViewModel by viewModels()
     private var binding: FragmentOffersBinding? = null
-    private val adapter: OffersAdapter = OffersAdapter()
+    private val addToSLListener: (item: Offer) -> Unit = {
+        slViewModel.addShoppingListItem(it)
+    }
+    private val adapter: OffersAdapter = OffersAdapter(addToSLListener)
 
     override fun onCreateView(
         inflater: LayoutInflater,

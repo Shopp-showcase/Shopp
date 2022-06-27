@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import com.example.shopp.databinding.FragmentShoppingListBinding
+import com.example.shopp.shoppinglist.data.ShoppingListItem
 import kotlinx.coroutines.launch
 
 class ShoppingListFragment : Fragment() {
@@ -16,7 +17,10 @@ class ShoppingListFragment : Fragment() {
     private val viewModel: ShoppingListViewModel by viewModels()
     private var binding: FragmentShoppingListBinding? = null
 
-    private val adapter = ShoppingListAdapter()
+    private val onCheckChangedListener = { item: ShoppingListItem, checked: Boolean ->
+        viewModel.checkShoppingListItem(item, checked)
+    }
+    private val adapter = ShoppingListAdapter(onCheckChangedListener)
 
     override fun onCreateView(
         inflater: LayoutInflater,

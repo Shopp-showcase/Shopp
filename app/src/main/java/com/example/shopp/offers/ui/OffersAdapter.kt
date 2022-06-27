@@ -8,7 +8,7 @@ import com.example.shopp.databinding.ItemOffersBinding
 import com.example.shopp.offers.data.Offer
 import com.example.shopp.offers.data.OffersList
 
-class OffersAdapter : RecyclerView.Adapter<OffersViewHolder>() {
+class OffersAdapter(private val addToSLListener: (item: Offer) -> Unit) : RecyclerView.Adapter<OffersViewHolder>() {
 
     private val adapterItems = ArrayList<Offer>()
 
@@ -21,7 +21,7 @@ class OffersAdapter : RecyclerView.Adapter<OffersViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OffersViewHolder {
         val binding = ItemOffersBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return OffersViewHolder(binding)
+        return OffersViewHolder(binding, addToSLListener)
     }
 
     override fun onBindViewHolder(holder: OffersViewHolder, position: Int) {
